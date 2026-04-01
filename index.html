@@ -11,16 +11,16 @@
       <nav>
         <p>Пункты навигации:</p>
         <ul>
-          <li><a alt="О курсе" href="">О курсе</a></li>
-          <li><a alt="План обучения" href="">План обучения</a></li>
-          <li><a alt="Полезные ссылки" href="">Полезные ссылки</a></li>
-          <li><a alt="Контакты" href="#contacts">Контакты</a></li>
+          <li><a href="#adout">О курсе</a></li>
+          <li><a href="#paln">План обучения</a></li>
+          <li><a href="#resources">Полезные ссылки</a></li>
+          <li><a href="#contacts">Контакты</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section>
+      <section id="about">
         <h1>Мой путь во Frontend-разработку</h1>
 
         <p>
@@ -28,19 +28,21 @@
           просто запомнить теги, а научиться размечать страницы грамотно,
           семантично и понятно для других разработчиков.
         </p>
-        <p></p>
       </section>
       <hr />
       <section>
         <h2>Что я изучаю прямо сейчас</h2>
         <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>React</li>
+          <li><img src="./images/HTML-logo.png" alt="Html logo" /> HTML</li>
+          <li><img src="./images/css-logo.png" alt="Css logo" /> CSS</li>
+          <li>
+            <img src="./images/JavaScript-logo.png" alt="JavaScript logo" />
+            JavaScript
+          </li>
+          <li><img src="./images/React-logo.png" alt="React logo" /> React</li>
         </ul>
       </section>
-      <section>
+      <section id="plan">
         <h2>Мой порядок обучения</h2>
 
         <ol>
@@ -50,13 +52,21 @@
           <li>Далее перехожу к React и компонентному подходу.</li>
         </ol>
       </section>
-      <section>
+      <section id="resources">
         <h2>Полезные ссылки</h2>
         <ul>
-          <li><a alt="MDN Web Docs" href="https://developer.mozilla.org/de/">MDN Web Docs</a></li>
-          <li><a alt="HTML Validator" href="https://validator.w3.org">HTML Validator</a></li>
-          <li><a alt="Написать мне на почту" href="mailto:kolia@example.com">Написать мне на почту</a></li>
-          <li><a alt="Перейти к контактам" href="#contacts">Перейти к контактам</a></li>
+          <li>
+            <a href="https://developer.mozilla.org/de/">MDN Web Docs</a>
+          </li>
+          <li>
+            <a href="https://validator.w3.org">HTML Validator</a>
+          </li>
+          <li>
+            <a href="mailto:kolia@example.com">Написать мне на почту</a>
+          </li>
+          <li>
+            <a href="#contacts">Перейти к контактам</a>
+          </li>
         </ul>
       </section>
 
@@ -69,9 +79,8 @@
         </p>
       </section>
     </main>
-
     <footer>
-        <p>Первая практика: ссылки, изображения и списки</p>
+      <p>Первая практика: ссылки, изображения и списки</p>
     </footer>
   </body>
 </html>
