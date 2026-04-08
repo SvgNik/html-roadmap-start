@@ -3,85 +3,66 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HTML Internship Notes</title>
+    <title>Basic-level tables</title>
   </head>
   <body>
     <header>
-      <p>HTML Internship Notes</p>
-      <nav>
-        <ul>
-          <li><a href="#overview">Обзор</a></li>
-          <li><a href="#topics">Темы</a></li>
-          <li><a href="#work-mode">Режим работы</a></li>
-          <li><a href="#contacts">Контакты</a></li>
-        </ul>
-      </nav>
+      <p>Basic-level tables</p>
     </header>
 
     <main>
-      <section id="overview">
-        <h1>Как я использую HTML для подготовки к internship</h1>
-        <p>
-          Я изучаю HTML как основу frontend-разработки. Для меня важно не просто
-          знать теги, а понимать структуру страницы, смысловые области и
-          правильную семантику.
-        </p>
-      </section>
+      <h1>Мой план изучения frontend</h1>
+      <p>
+        Ниже я собрал базовый учебный план по темам, которые нужно закрыть для
+        уверенного старта во frontend.
+      </p>
 
-      <section id="topics">
-        <h2>Темы</h2>
-        <p>Темы, которые я уже отрабатываю</p>
+      <table>
+        <caption>
+          План изучения frontend по неделям
+        </caption>
+        <thead>
+          <tr scope="row">
+            <th scope="col">Неделя</th>
+            <th scope="col">Тема</th>
+            <th scope="col">Что делаю руками</th>
+            <th scope="col">Статус</th>
+          </tr>
+        </thead>
 
-        <article>
-          <h3>Структура HTML-документа</h3>
-          <p>
-            Я уже умею собирать базовый HTML-документ и понимаю разницу между
-            head, body, header и main.
-          </p>
-        </article>
-        <article>
-          <h3>Текстовая разметка</h3>
-          <p>
-            Я уже использую заголовки, абзацы, цитаты и выделение текста по
-            смыслу, а не только ради внешнего вида.
-          </p>
-        </article>
-        <article>
-          <h3>Ссылки и списки</h3>
-          <p>
-            Я уже умею делать навигацию, списки, якорные ссылки и базовую
-            структуру контентных блоков.
-          </p>
-        </article>
-      </section>
-
-      <section id="work-mode">
-        <h2>Режим работы</h2>
-        <p>Как я закрепляю материал</p>
-
-        <p>
-          После каждого блока я делаю практику, исправляю замечания после review
-          и обязательно сохраняю результат через Git и GitHub.
-        </p>
-      </section>
-
-      <aside>
-        <h2>Напоминание</h2>
-        <p>
-          Если блок не доведён до чистого HTML и коммита, значит блок ещё не
-          закрыт.
-        </p>
-      </aside>
+        <tbody>
+          <tr>
+            <td>Неделя 1</td>
+            <td>HTML basics</td>
+            <td>Структура документа, текстовые теги, ссылки, списки</td>
+            <td>В работе</td>
+          </tr>
+          <tr>
+            <td>Неделя 2</td>
+            <td>Semantic HTML</td>
+            <td>Section, article, nav, main, aside</td>
+            <td>В работе</td>
+          </tr>
+          <tr>
+            <td>Неделя 3</td>
+            <td>Forms basics</td>
+            <td>Input, label, textarea, button, form</td>
+            <td>Запланировано</td>
+          </tr>
+          <tr>
+            <td>Неделя 4</td>
+            <td>CSS basics</td>
+            <td>Цвета, текст, box model, селекторы</td>
+            <td>Запланировано</td>
+          </tr>
+          <tr>
+            <td>Неделя 5</td>
+            <td>Layout</td>
+            <td>Flexbox, width, spacing, alignment</td>
+            <td>Запланировано</td>
+          </tr>
+        </tbody>
+      </table>
     </main>
-
-    <footer>
-      <section id="contacts">
-        <h2>Контакты</h2>
-        <p>
-          Для учебных вопросов со мной можно связаться по почте
-          <a href="mailto:trainee@example.com">trainee@example.com</a>
-        </p>
-      </section>
-    </footer>
   </body>
 </html>
