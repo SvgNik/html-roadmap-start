@@ -3,66 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Basic-level tables</title>
+    <title>Форма обратной связи</title>
   </head>
   <body>
     <header>
-      <p>Basic-level tables</p>
+      <p>Форма обратной связи</p>
     </header>
 
     <main>
-      <h1>Мой план изучения frontend</h1>
-      <p>
-        Ниже я собрал базовый учебный план по темам, которые нужно закрыть для
-        уверенного старта во frontend.
-      </p>
+      <section>
+        <h1>Форма учебной заявки</h1>
+        <p>
+          Эта форма нужна для тренировки базовой HTML-разметки форм. Моя задача
+          — правильно связать поля, подписи и кнопку отправки.
+        </p>
+      </section>
 
-      <table>
-        <caption>
-          План изучения frontend по неделям
-        </caption>
-        <thead>
-          <tr>
-            <th scope="col">Неделя</th>
-            <th scope="col">Тема</th>
-            <th scope="col">Что делаю руками</th>
-            <th scope="col">Статус</th>
-          </tr>
-        </thead>
+      <form action="">
+        <label for="name">Имя</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Введите ваше имя"
+        />
 
-        <tbody>
-          <tr>
-            <td>Неделя 1</td>
-            <td>HTML basics</td>
-            <td>Структура документа, текстовые теги, ссылки, списки</td>
-            <td>В работе</td>
-          </tr>
-          <tr>
-            <td>Неделя 2</td>
-            <td>Semantic HTML</td>
-            <td>Section, article, nav, main, aside</td>
-            <td>В работе</td>
-          </tr>
-          <tr>
-            <td>Неделя 3</td>
-            <td>Forms basics</td>
-            <td>Input, label, textarea, button, form</td>
-            <td>Запланировано</td>
-          </tr>
-          <tr>
-            <td>Неделя 4</td>
-            <td>CSS basics</td>
-            <td>Цвета, текст, box model, селекторы</td>
-            <td>Запланировано</td>
-          </tr>
-          <tr>
-            <td>Неделя 5</td>
-            <td>Layout</td>
-            <td>Flexbox, width, spacing, alignment</td>
-            <td>Запланировано</td>
-          </tr>
-        </tbody>
-      </table>
+        <label for="email">email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Введите ваш email"
+        />
+
+        <label for="password">password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Введите пароль"
+        />
+
+        <label for="direction">Направление</label>
+        <select name="direction" id="direction" title="Выбор">
+          <option value="frontend">Frontend</option>
+          <option value="fullstack">Fullstack</option>
+          <option value="UI Basics">UI Basics</option>
+        </select>
+
+        <label for="learning-background">Что вы уже изучали?</label>
+        <textarea
+          name="learning-background"
+          id="learning-background"
+          placeholder="Напишите, что вы уже изучали"
+        ></textarea>
+
+        <button type="submit">Отправить заявку</button>
+      </form>
     </main>
   </body>
 </html>
