@@ -3,62 +3,80 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Форма обратной связи</title>
+    <title>учебный интенсив</title>
   </head>
   <body>
     <header>
-      <p>Форма обратной связи</p>
+      <p>учебный интенсив</p>
     </header>
 
     <main>
       <section>
-        <h1>Форма учебной заявки</h1>
+        <h1>Регистрация на учебный интенсив</h1>
         <p>
-          Эта форма нужна для тренировки базовой HTML-разметки форм. Моя задача
-          — правильно связать поля, подписи и кнопку отправки.
+          Эта форма нужна для практики более правильной HTML-разметки. Здесь я
+          тренирую grouping полей, обязательные поля и базовые атрибуты формы.
         </p>
       </section>
 
-      <form action="">
-        <label for="name">Имя</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Введите ваше имя"
-        />
+      <legend>Личные данные</legend>
+      <form action="#">
+        <fieldset>
+          <label for="name">Имя:</label>
+          <input
+            type="name"
+            id="name"
+            name="name"
+            required
+            autocomplete="name"
+          />
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            autocomplete="email"
+          />
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            autocomplete="new-password"
+          />
+        </fieldset>
 
-        <label for="email">email</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Введите ваш email"
-        />
+        <legend>Детали обучения</legend>
+        <fieldset>
+          <label for="direction">Направление:</label>
+          <select name="direction" id="direction">
+            <option value="" selected disabled>Выберите направление</option>
+            <option value="frontend">Frontend</option>
+            <option value="fullstack">Fullstack</option>
+            <option value="ui-basics">UI Basics</option>
+          </select>
 
-        <label for="password">password</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          placeholder="Введите пароль"
-        />
+          <label for="date-start">Дата старта:</label>
+          <input type="date" id="date-start" name="date-start" />
+          <label for="hours-per-day">Количество часов в день:</label>
+          <input
+            type="number"
+            id="hours-per-day"
+            name="hours-per-day"
+            min="1"
+            max="12"
+          />
+        </fieldset>
 
-        <label for="direction">Направление</label>
-        <select name="direction" id="direction" title="Выбор">
-          <option value="frontend">Frontend</option>
-          <option value="fullstack">Fullstack</option>
-          <option value="UI Basics">UI Basics</option>
-        </select>
-
-        <label for="learning-background">Что вы уже изучали?</label>
         <textarea
-          name="learning-background"
-          id="learning-background"
-          placeholder="Напишите, что вы уже изучали"
+          name="comment"
+          id="comment"
+          placeholder="Напишите, что вы уже изучали и с какой целью проходите обучение"
         ></textarea>
 
-        <button type="submit">Отправить заявку</button>
+        <button type="submit">Зарегистрироваться</button>
       </form>
     </main>
   </body>
