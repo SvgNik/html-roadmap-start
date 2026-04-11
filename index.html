@@ -3,84 +3,81 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>учебный интенсив</title>
+    <title>Доступный HTML</title>
   </head>
   <body>
     <header>
-      <p>Учебный интенсив</p>
+      <h1>Как я делаю HTML более доступным</h1>
+      <p>
+        Доступный HTML нужен для того, чтобы страница была понятнее не только
+        визуально, но и по смыслу. Это важно для пользователей, screen reader и
+        качества самой разметки.
+      </p>
     </header>
 
     <main>
       <section>
-        <h1>Регистрация на учебный интенсив</h1>
-        <p>
-          Эта форма нужна для практики более правильной HTML-разметки. Здесь я
-          тренирую grouping полей, обязательные поля и базовые атрибуты формы.
-        </p>
+        <h2>Что важно проверить</h2>
+        <ul>
+          <li>У изображений есть осмысленный alt</li>
+          <li>У формы есть подписи полей</li>
+          <li>На странице один главный h1</li>
+          <li>Ссылки и кнопки не путаются между собой</li>
+        </ul>
       </section>
 
-      <form>
-        <fieldset>
-          <legend>Личные данные</legend>
-          <label for="name">Имя:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            required
-            autocomplete="name"
-          />
-          <label for="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            autocomplete="email"
-          />
-          <label for="password">Password:</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            required
-            autocomplete="new-password"
-          />
-        </fieldset>
+      <section>
+        <h2>Пример ссылки</h2>
+        <p>Чтобы открыть документацию по HTML, перейдите на сайт MDN.</p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+          >Открыть MDN по HTML</a
+        >
+      </section>
 
-        <fieldset>
-          <legend>Детали обучения</legend>
-          <label for="direction">Направление:</label>
-          <select name="direction" id="direction">
-            <option value="" selected disabled>Выберите направление</option>
-            <option value="frontend">Frontend</option>
-            <option value="fullstack">Fullstack</option>
-            <option value="ui-basics">UI Basics</option>
-          </select>
+      <section>
+        <h2>Пример кнопки</h2>
+        <p>
+          Кнопка должна выполнять действие, а не просто вести на другую
+          страницу.
+        </p>
+        <button type="submit">Отправить форму</button>
+      </section>
 
-          <label for="date-start">Дата старта:</label>
-          <input type="date" id="date-start" name="date-start" />
-          <label for="hours-per-day">Количество часов в день:</label>
-          <input
-            type="number"
-            id="hours-per-day"
-            name="hours-per-day"
-            min="1"
-            max="12"
-          />
-        </fieldset>
+      <section>
+        <h2>Пример изображения</h2>
+        <p>Иллюстрация структуры HTML-документа</p>
+        <img
+          src="./images/HTML-logo.png"
+          alt="Иллюстрация структуры HTML-документа"
+        />
+      </section>
 
-        <fieldset>
-          <legend>Комментарий</legend>
-          <textarea
-            name="comment"
-            id="comment"
-            placeholder="Напишите, что вы уже изучали и с какой целью проходите обучение"
-          ></textarea>
-        </fieldset>
+      <section>
+        <h2>Мини-форма</h2>
+        <form action="#">
+          <label for="name">
+            Введите ваше имя:
+            <input
+              type="text"
+              id="name"
+              placeholder="Введите ваше имя"
+              required
+            />
+          </label>
 
-        <button type="submit">Зарегистрироваться</button>
-      </form>
+          <label for="email">
+            Введите ваш email:
+            <input
+              type="email"
+              id="email"
+              placeholder="Введите ваш email"
+              required
+            />
+          </label>
+
+          <button type="submit">Отправить форму</button>
+        </form>
+      </section>
     </main>
   </body>
 </html>
