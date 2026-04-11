@@ -3,79 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Доступный HTML</title>
+    <title>Responsive Images Practice</title>
   </head>
   <body>
     <header>
-      <h1>Как я делаю HTML более доступным</h1>
+      <h1>Как я использую адаптивные изображения</h1>
       <p>
-        Доступный HTML нужен для того, чтобы страница была понятнее не только
-        визуально, но и по смыслу. Это важно для пользователей, screen reader и
-        качества самой разметки.
+        Адаптивные изображения помогают загружать более подходящие файлы для
+        разных экранов и устройств. Это улучшает производительность и делает
+        страницу аккуратнее.
       </p>
     </header>
 
     <main>
       <section>
-        <h2>Что важно проверить</h2>
-        <ul>
-          <li>У изображений есть осмысленный alt</li>
-          <li>У формы есть подписи полей</li>
-          <li>На странице один главный h1</li>
-          <li>Ссылки и кнопки не путаются между собой</li>
-        </ul>
+        <h2>Пример изображения с srcset</h2>
+        <img
+          src="./images/html.png"
+          alt="Логотип HTML для практики адаптивных изображений"
+          srcset="./images/html-small.png 480w ./images/html-medium.png 768w ./images/html-large.png 1200w"
+          sizes="(max-width: 600px) 100vw, 600px"
+        />
       </section>
 
       <section>
-        <h2>Пример ссылки</h2>
-        <p>Чтобы открыть документацию по HTML, перейдите на сайт MDN.</p>
-        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"
-          >Открыть MDN по HTML</a
-        >
-      </section>
-
-      <section>
-        <h2>Пример кнопки</h2>
-        <p>
-          Кнопка должна выполнять действие, а не просто вести на другую
-          страницу.
-        </p>
-        <button type="button">Отправить форму</button>
-      </section>
-
-      <section>
-        <h2>Пример изображения</h2>
-        <p>Иллюстрация структуры HTML-документа</p>
-        <img src="./images/HTML-logo.png" alt="HTML logo" />
-      </section>
-
-      <section>
-        <h2>Мини-форма</h2>
-        <form>
-          <label for="name">
-            Введите ваше имя:
-            <input
-              name="name"
-              type="text"
-              id="name"
-              placeholder="Введите ваше имя"
-              required
-            />
-          </label>
-
-          <label for="email">
-            Введите ваш email:
-            <input
-              name="email"
-              type="email"
-              id="email"
-              placeholder="Введите ваш email"
-              required
-            />
-          </label>
-
-          <button type="submit">Отправить форму</button>
-        </form>
+        <h2>Пример изображения через picture</h2>
+        <picture>
+          <source type="img/webp" srcset="./images/html-small.webp 480w ./images/html-medium.webp 768w ./images/html-large.webp 1200w" />
+          <img src="./images/html-fallback.png" alt="Логотип HTML с fallback изображением" />
+        </picture>
       </section>
     </main>
   </body>
