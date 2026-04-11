@@ -7,7 +7,7 @@
   </head>
   <body>
     <header>
-      <p>учебный интенсив</p>
+      <p>Учебный интенсив</p>
     </header>
 
     <main>
@@ -19,12 +19,12 @@
         </p>
       </section>
 
-      <legend>Личные данные</legend>
-      <form action="#">
+      <form>
         <fieldset>
+          <legend>Личные данные</legend>
           <label for="name">Имя:</label>
           <input
-            type="name"
+            type="text"
             id="name"
             name="name"
             required
@@ -48,8 +48,8 @@
           />
         </fieldset>
 
-        <legend>Детали обучения</legend>
         <fieldset>
+          <legend>Детали обучения</legend>
           <label for="direction">Направление:</label>
           <select name="direction" id="direction">
             <option value="" selected disabled>Выберите направление</option>
@@ -70,11 +70,14 @@
           />
         </fieldset>
 
-        <textarea
-          name="comment"
-          id="comment"
-          placeholder="Напишите, что вы уже изучали и с какой целью проходите обучение"
-        ></textarea>
+        <fieldset>
+          <legend>Комментарий</legend>
+          <textarea
+            name="comment"
+            id="comment"
+            placeholder="Напишите, что вы уже изучали и с какой целью проходите обучение"
+          ></textarea>
+        </fieldset>
 
         <button type="submit">Зарегистрироваться</button>
       </form>
