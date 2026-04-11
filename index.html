@@ -40,24 +40,22 @@
           Кнопка должна выполнять действие, а не просто вести на другую
           страницу.
         </p>
-        <button type="submit">Отправить форму</button>
+        <button type="button">Отправить форму</button>
       </section>
 
       <section>
         <h2>Пример изображения</h2>
         <p>Иллюстрация структуры HTML-документа</p>
-        <img
-          src="./images/HTML-logo.png"
-          alt="Иллюстрация структуры HTML-документа"
-        />
+        <img src="./images/HTML-logo.png" alt="HTML logo" />
       </section>
 
       <section>
         <h2>Мини-форма</h2>
-        <form action="#">
+        <form>
           <label for="name">
             Введите ваше имя:
             <input
+              name="name"
               type="text"
               id="name"
               placeholder="Введите ваше имя"
@@ -68,6 +66,7 @@
           <label for="email">
             Введите ваш email:
             <input
+              name="email"
               type="email"
               id="email"
               placeholder="Введите ваш email"
