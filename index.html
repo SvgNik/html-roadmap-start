@@ -3,49 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Images Practice</title>
+    <title>Lazy Loading Practice</title>
   </head>
   <body>
     <header>
-      <h1>Как я использую адаптивные изображения</h1>
+      <h1>Как я использую lazy loading в HTML</h1>
       <p>
-        Адаптивные изображения помогают загружать более подходящие файлы для
-        разных экранов и устройств. Это улучшает производительность и делает
-        страницу аккуратнее.
+        Lazy loading помогает не загружать все изображения сразу. Это полезно
+        для длинных страниц, где часть контента находится ниже первого экрана.
       </p>
     </header>
 
     <main>
       <section>
-        <h2>Пример изображения с srcset</h2>
+        <h2>Главное изображение</h2>
+        <p>
+          Главное изображение в верхней части страницы должно загружаться сразу,
+          потому что пользователь видит его первым.
+        </p>
+        <img src="./images/html-fallback.png" alt="Главное изображение HTML" />
+      </section>
+
+      <section>
+        <h2>Изображение ниже первого экрана</h2>
+        <p>
+          Изображения ниже первого экрана можно загружать отложенно, чтобы не
+          перегружать начальную загрузку страницы.
+        </p>
         <img
-          src="./images/html.png"
-          alt="Логотип HTML для практики адаптивных изображений"
-          srcset="
-            ./images/html-small.png   480w,
-            ./images/html-medium.png  768w,
-            ./images/html-large.png  1200w
-          "
-          sizes="(max-width: 600px) 100vw, 600px"
+          src="./images/html-small.png"
+          alt="Дополнительное изображение HTML"
+          loading="lazy"
         />
       </section>
 
       <section>
-        <h2>Пример изображения через picture</h2>
-        <picture>
-          <source
-            type="image/webp"
-            srcset="
-              ./images/html-small.webp   480w,
-              ./images/html-medium.webp  768w,
-              ./images/html-large.webp  1200w
-            "
-          />
-          <img
-            src="./images/html-fallback.png"
-            alt="Логотип HTML с fallback изображением"
-          />
-        </picture>
+        <h2>Ещё один пример lazy loading</h2>
+        <p>
+          На длинных страницах и в галереях lazy loading помогает отложить
+          загрузку менее важных изображений.
+        </p>
+        <img
+          src="./images/html-medium.png"
+          alt="Изображение HTML для длинной страницы"
+          loading="lazy"
+        />
       </section>
     </main>
   </body>
