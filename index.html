@@ -3,51 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lazy Loading Practice</title>
+    <title>Data Attributes Practice</title>
   </head>
   <body>
     <header>
-      <h1>Как я использую lazy loading в HTML</h1>
+      <h1>Как я использую data-attributes в HTML</h1>
       <p>
-        Lazy loading помогает не загружать все изображения сразу. Это полезно
-        для длинных страниц, где часть контента находится ниже первого экрана.
+        Data-attributes помогают добавлять служебные данные в HTML-разметку. Это
+        удобно, когда нужно связать элементы страницы с логикой JavaScript.
       </p>
     </header>
 
     <main>
       <section>
-        <h2>Главное изображение</h2>
-        <p>
-          Главное изображение в верхней части страницы должно загружаться сразу,
-          потому что пользователь видит его первым.
-        </p>
-        <img src="./images/html-fallback.png" alt="Главное изображение HTML" />
+        <h2>Карточки направлений</h2>
+        <ul>
+          <li data-track="frontend" data-level="beginner">
+            <div>
+              <h3>Frontend</h3>
+              <p>beginner</p>
+            </div>
+          </li>
+          <li data-track="fullstack" data-level="junior">
+            <div>
+              <h3>Fullstack</h3>
+              <p>junior</p>
+            </div>
+          </li>
+          <li data-track="ui" data-level="starter">
+            <div>
+              <h3>UI Basics</h3>
+              <p>starter</p>
+            </div>
+          </li>
+        </ul>
       </section>
 
       <section>
-        <h2>Изображение ниже первого экрана</h2>
-        <p>
-          Изображения ниже первого экрана можно загружать отложенно, чтобы не
-          перегружать начальную загрузку страницы.
-        </p>
-        <img
-          src="./images/html-small.png"
-          alt="Дополнительное изображение HTML"
-          loading="lazy"
-        />
+        <h2>Кнопки действий</h2>
+        <button data-action="open-form">Открыть форму</button>
+        <button data-action="save">Сохранить</button>
+        <button data-action="delete">Удалить</button>
       </section>
 
       <section>
-        <h2>Ещё один пример lazy loading</h2>
-        <p>
-          На длинных страницах и в галереях lazy loading помогает отложить
-          загрузку менее важных изображений.
-        </p>
-        <img
-          src="./images/html-medium.png"
-          alt="Изображение HTML для длинной страницы"
-          loading="lazy"
-        />
+        <h2>Статусы задач</h2>
+
+        <ul>
+          <li data-status="done">HTML basics — done</li>
+          <li data-status="in-progress">Forms basics — in-progress</li>
+          <li data-status="review">Accessibility basics — review</li>
+        </ul>
       </section>
     </main>
   </body>
