@@ -3,52 +3,83 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Учебная HTML-страница о пути во frontend-разработку, базовой семантике и практике"
-    />
-    <title>Путь во frontend с нуля</title>
+    <title>HTML для React мышления</title>
   </head>
   <body>
     <header>
-      <h1>Как я учусь frontend-разработке с нуля</h1>
-      <p>
-        Я изучаю frontend поэтапно и стараюсь не просто читать теорию, а сразу
-        закреплять её практикой, коммитами и небольшими учебными страницами.
-      </p>
+      <div>Frontend Component Thinking</div>
+      <nav>
+        Навигация:
+        <ul>
+          <li><a href="#about-course">О курсе</a></li>
+          <li><a href="#blocks">Блоки</a></li>
+          <li><a href="#practice">Практика</a></li>
+          <li><a href="#contact">Контакты</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-      <section>
-        <h2>Что я уже освоил</h2>
-        <ul>
-          <li>Базовую структуру HTML-документа</li>
-          <li>Семантические теги</li>
-          <li>Таблицы</li>
-          <li>Формы</li>
-          <li>Основы доступности</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Почему мне важна практика</h2>
+      <section id="about-course">
+        <h1>Как я учусь видеть HTML как будущие компоненты</h1>
         <p>
-          Я хочу не просто знать HTML-теги, а уметь использовать их в реальной
-          разметке, чтобы потом легче перейти к CSS, JavaScript, React и
-          Next.js.
+          Чтобы потом легче перейти к React и Next.js, я стараюсь уже на этапе
+          HTML видеть страницу как набор логических интерфейсных блоков.
+        </p>
+      </section>
+      <section id="blocks">
+        <h2>Почему важно мыслить блоками</h2>
+        <p>
+          Когда я смотрю на страницу как на набор блоков, мне легче понимать,
+          какие части потом станут отдельными компонентами в React.
         </p>
       </section>
 
       <section>
-        <h2>Полезный источник</h2>
-        <p>Для изучения HTML я использую качественную документацию.</p>
-        <a href="https://developer.mozilla.org/ru/docs/Web/HTML">Открыть документацию HTML на MDN</a>
+        <h2>Какие блоки я уже вижу как компоненты</h2>
+        <ul>
+          <li>
+            <article>
+              <h3>Header</h3>
+              <p>
+                Шапка сайта с названием и навигацией обычно становится отдельным
+                компонентом.
+              </p>
+            </article>
+          </li>
+          <li>
+            <article>
+              <h3>Course Card</h3>
+              <p>
+                Карточка курса — хороший пример повторяемого UI-блока, который
+                удобно вынести в компонент.
+              </p>
+            </article>
+          </li>
+          <li>
+            <article>
+              <h3>Footer</h3>
+              <p>
+                Нижняя часть страницы с контактами или ссылками тоже часто
+                становится отдельным компонентом.
+              </p>
+            </article>
+          </li>
+        </ul>
       </section>
 
-      <section>
-        <h2>Изображение</h2>
-        <img src="./images/css-logo.png" alt="Логотип CSS">
+      <section id="practice">
+        <h2>Почему это поможет дальше</h2>
+        <p>
+          Если я уже в HTML понимаю границы блоков, мне будет легче писать JSX,
+          разбивать интерфейс на компоненты и поддерживать проект.
+        </p>
       </section>
     </main>
+
+    <footer id="contact">
+      <p>Контакты: <a href="mailto:example@email.com">example@email.com</a></p>
+      <p>Учебная страница по HTML-мышлению для React</p>
+    </footer>
   </body>
 </html>
